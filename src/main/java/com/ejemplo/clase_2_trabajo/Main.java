@@ -2,22 +2,29 @@ package com.ejemplo.clase_2_trabajo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
   public static void main(String[] args) {
-    words w = new words();
+    // Creo la instacia de la clase
+    WordsToMayus w = new WordsToMayus();
 
-    ArrayList<String> words = new ArrayList<String>(
-        Arrays.asList("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"));
+    // Uso de los arrays
+    String list[] = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k" };
+
+    ArrayList<String> words = new ArrayList<String>(Arrays.asList(list));
     w.WordsToUpperCase(words);
 
-    String q = "curso de java";
+    // Mensaje
+    String message = "lorem ipsum lorem ipsum";
 
-    String v[] = q.split("|");
+    // convierte el STRING en un ARRAY
 
-    ArrayList<String> c = new ArrayList<String>(Arrays.asList(v));
+    List<String> StringToArray = Arrays.asList(message.split("||"));
 
-    w.WordsToUpperCase(c);
+    // Devuelve un ArrayList
+    ArrayList<String> ArrayList = new ArrayList<String>(StringToArray);
+    w.WordsToUpperCase(ArrayList);
 
   }
 }
