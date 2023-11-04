@@ -7,9 +7,6 @@ import com.ejemplo.sql.sql;
 
 public class Sql {
   public static void main(String[] args) throws SQLException {
-    String jdbcUrl = "jdbc:mysql://localhost:3306/x_db";
-    String usuario = "lau";
-    String contraseña = "123";
     String consulta = "SELECT * FROM users";
 
     ResultSet result = sql.Resultado(jdbcUrl, usuario, contraseña, consulta);
